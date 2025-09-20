@@ -38,26 +38,45 @@ import processing.core.PApplet;
  *     mousePressed variable
  */
 public class _03_VisualArraySorter extends PApplet {
-    static final int WIDTH = 600;
-    static final int HEIGHT = 400;
-
+    static final int WIDTH = 500;
+    static final int HEIGHT = 500;
+    int[] ints;
     @Override
     public void settings() {
+      setSize(WIDTH,HEIGHT);
         
     }
 
     @Override
     public void setup() {
-        
+        ints = new int[50];
+        for(int i =0; i<ints.length; i++) {
+        	ints[i] = (int)random(HEIGHT);
+        }
+        noStroke();
     }
 
     @Override
     public void draw() {
-        
+        background(0,0,0);
+        fill(255,255,255);
+        for(int i =0; i<ints.length; i++) {
+        	rect(i*(WIDTH/ints.length),HEIGHT,WIDTH/ints.length,-ints[i]);
+        }
+        stepSort(ints);
+        if(mousePressed) {
+        	randomizeInts(ints);
+        }
     }
 
     static public void main(String[] passedArgs) {
         PApplet.main(_03_VisualArraySorter.class.getName());
+    }
+    
+    void randomizeInts(int[] ints) {
+    	for(int i =0; i<ints.length; i++) {
+        	ints[i] = (int)random(HEIGHT);
+        }
     }
     
     /*********************** DO NOT MODIFY THE CODE BELOW ********************/

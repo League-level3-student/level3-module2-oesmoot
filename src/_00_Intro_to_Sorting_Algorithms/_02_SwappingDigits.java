@@ -32,10 +32,8 @@ class _02_SwappingDigits {
     	int val = 0;
     	sortIntArray(arr);
     	double arrNum = 0;
-    	arrNum = ((arr.length)*0.5)-0.5;
-    	String stringNum = String.valueOf(arrNum);
-    	stringNum.replace(".0", "");
-    	val = arr[Integer.parseInt(stringNum)];	
+    	arrNum = ((arr.length)*0.5);
+    	val = arr[(int) arrNum];	
     	
     	
         return val;
