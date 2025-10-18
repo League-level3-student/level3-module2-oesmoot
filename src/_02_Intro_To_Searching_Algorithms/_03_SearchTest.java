@@ -25,6 +25,8 @@ class _03_SearchTest {
         // 2. Use the assertEquals() method to test your binary search method
         //    remember that the array must be sorted
     	int[] array = {1, 13, 20, 38, 47, 59, 60, 74, 92, 183, 451, 1384};
-        assertEquals(10, _02_BinarySearch.binarySearch(array, 0, 0, 10));
+        assertEquals(10, _02_BinarySearch.binarySearch(array, 0, 11, 451));
+        assertEquals(1,_02_BinarySearch.binarySearch(array, 0, 11, 13));
+        assertEquals(-1, _02_BinarySearch.binarySearch(array, 0, 11, 2048));
     }
 }

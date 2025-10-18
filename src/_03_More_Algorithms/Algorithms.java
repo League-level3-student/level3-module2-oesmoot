@@ -8,10 +8,50 @@ import java.util.List;
 public class Algorithms {
     
     public static String multiply(int num1, int num2) {
-        return null;
+        return num1 + " x " +num2 + " = " + num1*num2;
+    }
+    
+    public static boolean isPrime(int num) {
+    	
+    	for(int i = 2; i<num; i++) {
+    		if(num%i == 0&& num!=2) {
+    			return false;
+    		}
+    	}
+    	return true;
+    }
+    public static boolean isSquare(int num) {
+    	for(int i = 0; i<=num; i++) {
+    		if(i*i == num) {
+    			return true;
+    		}
+    	}
+    	return false;
+    }
+    
+    public static boolean isCube(int num) {
+    	for(int i = 0; i<num; i++) {
+    		if(i*i*i == num) {
+    			return true;
+    		}
+    	}
+    	return false;
     }
     
     public static int findBrokenEgg(List<String> eggs) {
-        return 0;
+    	for(int i = 0; i<eggs.size(); i++) {
+    		if(eggs.get(i).equals("cracked")) {
+    			return i;
+    		}
+    	}
+        return -1;
+    }
+    
+    public static int countPearls(List<Boolean> oysters) {
+    	int num = 0;
+    	for(int i = 0; i<oysters.size(); i++) {
+    		
+    	}
+    	return 0;
     }
 }

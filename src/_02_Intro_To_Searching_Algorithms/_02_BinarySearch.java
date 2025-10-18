@@ -22,6 +22,13 @@ public class _02_BinarySearch {
     		if(array[mid] == value) {
     			return mid;
     		}
+    		else if(array[mid] > value) {
+    			return binarySearch(array,start,mid-1,value);
+    		}
+    		
+    		else {
+    			return binarySearch(array,mid+1,end,value);
+    		}
     	}
             // 3. create an integer called mid and set it equal
             //    to the half way point between start and end
@@ -38,6 +45,6 @@ public class _02_BinarySearch {
             //    method. Use mid + 1 as the start, and pass in end.
 
         // 7. return -1 because the value was not found
-        return 0;
+        return -1;
     } 
 }
